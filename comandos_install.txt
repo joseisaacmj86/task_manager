@@ -1,0 +1,27 @@
+python3.10 -m venv env
+
+source env/bin/activate  # En Windows usa: env\Scripts\activate
+
+pip install fastapi uvicorn
+
+
+pip install sqlalchemy
+pip install mysqlclient
+pip install pymysql
+
+
+db mysqlclient
+sudo mysql -u root -p
+CREATE USER 'python'@'localhost' IDENTIFIED BY 'python';
+GRANT ALL PRIVILEGES ON *.* TO 'python'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+
+pip install python-multipart
+
+
+fronend
+pip install jinja2 aiofiles
+
+
+pip install -r requirements.txt
