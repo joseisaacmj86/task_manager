@@ -70,9 +70,6 @@ exportar e importar listas de tareas, y también eliminarlas.
 
 ### Esquemas
 
-- **Body_import_tasks_action_import_post**: 
-  - Descripción: Esquema para el cuerpo de la solicitud para importar tareas.
-  
 - **HTTPValidationError**: 
   - Descripción: Esquema para errores de validación HTTP.
   
@@ -141,11 +138,18 @@ Para instalar las librerías necesarias para este proyecto, usa los siguientes c
 
 ## Configuración de la Base de Datos
 
-Asegúrate de tener una base de datos MySQL configurada y accesible. Actualiza los parámetros de conexión en el archivo de configuración de tu aplicación FastAPI.
+Asegúrate de tener una base de datos MySQL configurada y accesible. 
+Actualiza los parámetros de conexión en el archivo de configuración database.py de tu aplicación FastAPI,
+en la linea:
+
+   ```bash 
+   SQLALCHEMY_DATABASE_URL = "mysql+pymysql://<usuario>:<contraseña>@<host>:<puerto>/<nombre_base_de_datos>"
+
+   ```
 
 ## Ejecución del Servidor
 
 Para iniciar el servidor, usa el siguiente comando:
 
 ```bash
-uvicorn app.main:app --reload
+uvicorn main:app --reload
