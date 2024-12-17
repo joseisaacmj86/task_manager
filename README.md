@@ -153,3 +153,77 @@ Para iniciar el servidor, usa el siguiente comando:
 
 ```bash
 uvicorn main:app --reload
+```
+
+## Funcionamiento de la Task Manager
+
+
+### 1. Frontend de la Task Manager
+
+A continuación, se muestra una imagen donde se presenta el Frontend de la Task Manager:
+
+![Diagrama de la API](app/static/images/fronend_api.png "Arquitectura de la API")
+
+---
+
+### 2. Vista de Tareas
+
+La pantalla principal de la aplicación muestra una lista completa de todas las tareas existentes. Cada tarea incluye detalles como el título, descripción, estado y botones de acción.
+
+![Vista de Tareas](app/static/images/task_list.png "Vista de Tareas")
+
+- **Botones de Acción**:
+  - **Editar**: Actualiza los detalles de una tarea.
+  - **Eliminar**: Borra la tarea seleccionada.
+  - **COMPLETADA/PENDIENTE**: Cambia el estado de la tarea a 'TERMINADA' o 'PENDIENTE'.
+
+---
+
+### 3. Crear Nueva Tarea
+
+Desde la sección "Crear Nueva Tarea", puedes agregar tareas al sistema. Completa el formulario con los detalles necesarios y haz clic en el botón "Guardar".
+
+![Crear Nueva Tarea](app/static/images/create_task.png "Crear Nueva Tarea")
+
+---
+
+### 4. Actualizar Tarea (Editar)
+
+En esta sección, puedes editar los detalles de una tarea existente. Solo selecciona una tarea desde la lista y utiliza el formulario de edición para realizar los cambios necesarios.
+
+![Actualizar Tarea](app/static/images/update_task.png "Actualizar Tarea")
+
+---
+
+### 5. Estado de Tarea
+
+Cambia el estado de una tarea entre 'PENDIENTE' y 'TERMINADA'. Esto se realiza mediante el botón (PENDIENTE/TERMINADA) en el campo 'Accion' de la tabla lista de tareas. Cuando el estado de una tarea es 'TERMINADA', el boton de eliminar se habilita autoaticamente.
+
+![Estado de Tarea](app/static/images/task_status.png "Estado de Tarea")
+
+---
+
+### 6. Exportar e Importar Tareas
+
+La API permite exportar todas las tareas a un archivo `.json` o importar tareas desde un archivo. Ideal para respaldos o migraciones.
+
+#### Exportar Tareas:
+Haz clic en el botón "Exportar" para descargar un archivo `.json` con todas las tareas.
+
+![Exportar Tareas](app/static/images/export_tasks.png "Exportar Tareas")
+
+#### Importar Tareas:
+Selecciona un archivo `.json` y usa el botón "Importar" para cargar las tareas.
+
+![Importar Tareas](app/static/images/import_tasks.png "Importar Tareas")
+
+---
+
+### 7. Eliminar Tareas
+
+Desde la lista de tareas, puedes eliminar tareas específicas. Solo haz clic en el boton "Eliminar" correspondiente a la tarea a eliminar. Aparecerá un cuadro de confirmación antes de proceder.
+
+![Eliminar Tareas](app/static/images/delete_task.png "Eliminar Tareas")
+
+---
+

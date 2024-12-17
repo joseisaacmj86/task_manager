@@ -246,5 +246,17 @@ $(document).ready(function () {
         });
     });
 
+    $('table tbody tr').each(function() {
+        var status = $(this).find('td:eq(4)').text().trim();        
+        
+        if (status !== 'TERMINADA') {
+            $(this).find('.delete-task button')
+                    .prop('disabled', true)
+                    .addClass('btn-secondary disabled')
+                    .removeClass('btn-danger')
+                    .css('opacity', '0.65');
+        }
+    });
+
     
 });
